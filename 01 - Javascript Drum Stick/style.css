@@ -1,16 +1,20 @@
 #box {
-    display: block;
-    border: 1px solid black; 
-    padding: 1.5rem;
-    margin: 1rem;
+    border: 3px solid black; 
+    padding: 1rem;
+    margin: 0.5rem;
     display: flex;
     flex-direction: column;
     text-align: center;
+    color: blanchedalmond;
+    background-color: cornflowerblue;
+
+    
 }
 #box-container {
     display: flex;
     flex: 1;
     flex-direction: row;
+    align-content: center;
     justify-content: space-around;
 }
 span {
@@ -19,10 +23,13 @@ span {
 
 kbd {
     display: block;
-    width: 4rem;
+    width: 4vmax;
     font-size: 3rem;
 }
 body {
-    margin: 5vh;
     display: block;
+    margin: 5vmax;
+    margin-top: 40vmin;
+    background: url("bg2.jpg");
+    background-size: cover;
 }
