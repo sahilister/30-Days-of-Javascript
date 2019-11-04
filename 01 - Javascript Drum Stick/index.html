@@ -7,7 +7,7 @@
     
     </head>
     <body>
-        <div class="box-container">
+        <div class="boxc">
             <div data-key="65" class="box">
                 <kbd>A</kbd>
                 <span>CLAP</span>
@@ -37,7 +37,7 @@
                 <span>SNARE</span>
             </div>
             <div data-key="75" class="box">
-                <kbd>K</kbd>z
+                <kbd>K</kbd>
                 <span>TOM</span>
             </div>
             <div data-key="76" class="box">
@@ -58,17 +58,24 @@
 
 
         <script>
-            window.addEventListener('keydown', function(e) {
+            function playMusic(e){
                 const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-                const box = document.querySelector(`box[data-key="${e.keyCode}"]`);
-                console.log(audio); 
-                if(!audio)
-                    return;
+                const box = document.querySelector(`.box[data-key="${e.keyCode}"]`); 
+                if(!audio) return;
                 audio.currentTime = 0;
                 audio.play();
-                console.log(box);
-            });
+                box.classList.add('playing'); 
+            }
+
+            function removeTransition(e) {
+                if( e.propertyName !== 'transform' ) return ;
+                this.classList.remove('playing');
+            }
+            const boxc = document.querySelectorAll('.box');
+            boxc.forEach(box => box.addEventListener('transitionend', removeTransition));
+            window.addEventListener('keydown', playMusic);
+            
         </script>
+
     </body>
 </html>
-

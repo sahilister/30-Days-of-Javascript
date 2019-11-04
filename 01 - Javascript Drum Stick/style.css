@@ -7,22 +7,25 @@
     text-align: center;
     color: blanchedalmond;
     background-color: cornflowerblue;   
+    transition: all 0.07s;
 }
 
-.box:hover {
-    color: orange;
-    border: 3px solid grey; 
-    
-    
-}
-
-.box-container {
+.boxc {
     display: flex;
     flex: 1;
     flex-direction: row;
     align-content: center;
     justify-content: space-around;
 }
+
+.playing {
+    color: orange;
+    border: 3px solid grey; 
+    box-shadow: 0 0 10px yellow;
+    transform: scale(1.1);
+}
+
+
 span {
     font-size: 1rem;
 }
@@ -31,7 +34,9 @@ kbd {
     display: block;
     width: 4.5vmax;
     font-size: 3rem;
+    color: white;
 }
+
 body {
     display: block;
     margin: 5vmax;
