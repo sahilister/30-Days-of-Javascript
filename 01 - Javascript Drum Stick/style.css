@@ -1,4 +1,4 @@
-#box {
+.box {
     border: 3px solid black; 
     padding: 1rem;
     margin: 0.5rem;
@@ -6,11 +6,17 @@
     flex-direction: column;
     text-align: center;
     color: blanchedalmond;
-    background-color: cornflowerblue;
+    background-color: cornflowerblue;   
+}
 
+.box:hover {
+    color: orange;
+    border: 3px solid grey; 
+    
     
 }
-#box-container {
+
+.box-container {
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -23,7 +29,7 @@ span {
 
 kbd {
     display: block;
-    width: 4vmax;
+    width: 4.5vmax;
     font-size: 3rem;
 }
 body {
