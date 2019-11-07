@@ -17,9 +17,6 @@ body {
    height: 100%;
    transform: translateY(0px);
    position: relative;
-    
-    
-    
 }
 
 .hand {
@@ -28,4 +25,7 @@ body {
     background: black;
     position: absolute;
     top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.5s;
 }

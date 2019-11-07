@@ -2,8 +2,10 @@
     <head>
         <title>CSS JS Clock</title>
         <link rel="stylesheet" href="style.css">
+        
     </head>
     <body>
+        <script type="text/javscript" src="app.js"></script>
         <div class="clock">
             <div class="clock-face">
                 <div class="hand hour-hand"></div>
@@ -11,5 +13,19 @@
                 <div class="hand sec-hand"></div>
             </div>
         </div>
+        <script>
+            const secondHand = document.querySelector('.second-hand');
+
+            function setDate() {
+                const now = new Date();
+                const seconds = now.getSeconds();
+                const secondsDeg = (seconds/60) * 360;
+                secondHand.style.tranform = `rotate(${secondsDeg}deg)`;
+                console.log(secondsDeg);
+            }
+            setInterval(setDate, 1000);
+        
+        </script>
     </body>
+    
 </html>
